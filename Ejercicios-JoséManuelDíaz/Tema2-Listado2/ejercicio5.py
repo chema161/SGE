@@ -20,33 +20,27 @@ while opcion != 0:
 
     match opcion:
 
-        case '1':
+        case 1:
             numeros.add(15)
             print('Se ha añadido el número 15.')
 
-        case '2':
-            match 9 in numeros:
+        case 2:
+            if 9 in numeros:
+                numeros.remove(9)
+                print('Se ha eliminado el número 9.')
+            else:
+                print('El número 9 no se encuentra en el conjunto.')
 
-                case True:
-                    numeros.remove(9)
-                    print('Se ha eliminado el número 9.')
-
-                case False:
-                    print('El número 9 no se encuentra en el conjunto.')
-
-        case '3':
+        case 3:
             print(f'El conjunto tiene {len(numeros)} elementos.')
 
-        case '4':
-            match 6 in numeros:
+        case 4:
+            if 6 in numeros:
+                print('El número 6 está en el conjunto.')
+            else:
+                print('El número 6 no está en el conjunto.')
 
-                case True:
-                    print('El número 6 está en el conjunto.')
-
-                case False:
-                    print('El número 6 no está en el conjunto.')
-
-        case '0':
+        case 0:
             print('Saliendo del programa...')
 
         case default:
