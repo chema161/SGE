@@ -1,7 +1,7 @@
 f = open('entrada.txt')
 
-for linea in f.readline():
-    linea+1
 
-print(linea)
+
+for linea in f:
+    print(linea+1)
 
